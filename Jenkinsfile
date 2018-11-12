@@ -17,7 +17,7 @@ node (''){
   //imgName="hashicorp/terraform:0.10.8"
   //docker.image("${imgName}").pull()
   //docker.image("${imgName}").inside ("-v ${pwd}:/terraform -v /tmp:/tmp -u root"){
-    
+    sh "terraform init"
     sh "terraform plan"
     sh "terraform apply"
     
