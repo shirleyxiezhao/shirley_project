@@ -5,6 +5,19 @@ resource "aws_instance" "spring" {
   subnet_id              = "subnet-049cf4763e0a35908"
   key_name               = "my-key"
   
+  provisioner "file" {
+    source = "*.jar"
+    destination = "/tmp/*.jar"
+  }
+   provisioner "remote-exec" {
+     inline = [
+      "chmod +x /tmp/hardening.sh",
+      "sudo bash /tmp/hardening.sh"
+    ]
+  }
+  
+  
+  
   tags {
     Name = "sprint-boot"
   }
