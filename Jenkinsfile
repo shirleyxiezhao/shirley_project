@@ -19,7 +19,7 @@ node (''){
   //docker.image("${imgName}").inside ("-v ${pwd}:/terraform -v /tmp:/tmp -u root"){
     sh "terraform init"
     sh "terraform plan"
-    sh "terraform apply"
+    sh "terraform apply -auto-approve"
     
   //}
   
