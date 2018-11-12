@@ -1,3 +1,9 @@
+provider "aws" {
+  version = "<= 1.19.0"
+  region= "us-east-1"
+}
+
+
 resource "aws_instance" "spring" {
   ami                    = "ami-05aa248bfb1c99d0f"
   instance_type          = "t2.micro"
