@@ -29,8 +29,8 @@ resource "aws_instance" "spring" {
   }
 }
 
-resource "aws_elb" "spring-elb" {
-  name            = "spring-elb"
+resource "aws_elb" "springelb" {
+  name            = "springelb"
   subnets         = ["subnet-049cf4763e0a35908"]
   security_groups = ["sg-547cc53b"]
   
@@ -53,7 +53,7 @@ resource "aws_elb" "spring-elb" {
   idle_timeout = 60
   
   tags {
-    Name = "spring-boot"
+    Name = "springboot"
    
   }
 }
