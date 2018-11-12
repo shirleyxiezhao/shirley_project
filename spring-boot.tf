@@ -30,7 +30,7 @@ resource "aws_instance" "spring" {
 }
 
 resource "aws_elb" "spring_elb" {
-  name            = "spring_elb"
+  name            = "spring-elb"
   subnets         = ["subnet-049cf4763e0a35908"]
   security_groups = ["sg-547cc53b"]
   
