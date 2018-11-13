@@ -11,6 +11,12 @@ resource "aws_instance" "spring" {
   subnet_id              = "subnet-049cf4763e0a35908"
   key_name               = "my-key"
   
+  connection {
+    type     = "ssh"
+    user     = "ec2-user"
+    private_key = "${file("pkey.txt")}"
+  }
+
   provisioner "file" {
     source = "./spring-boot-sample-tomcat-2.1.1.BUILD-SNAPSHOT.jar"
     destination = "/tmp/spring-boot-sample-tomcat-2.1.1.BUILD-SNAPSHOT.jar"
