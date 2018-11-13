@@ -13,8 +13,8 @@ resource "aws_instance" "spring" {
   
   connection {
     type     = "ssh"
-    user     = "ec2-user"
-    private_key = "${file("private.pem")}"
+    user     = "ubuntu"
+    private_key = "${file("./private.pem")}"
   }
 
   provisioner "file" {
