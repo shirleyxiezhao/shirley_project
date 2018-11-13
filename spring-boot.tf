@@ -60,4 +60,4 @@ resource "aws_elb" "springelb" {
 #resource "aws_key_pair" "mykey" {
 #  key_name   = "my-key"
 #  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDE8Vfg+o5Xs+5fA+y1GIGKz4MjuFUb1cRo5oCl+FlWduUt67Q1XJC61TpckE/hRYEk6nGR/RZdbJJJV5mAQWyINNmfwZGz4e6CkIH6NdgtuE+XK18UtbKp8v2+cuzrysXHHZ3qIUx+5fEMI5p62+fRkdops2sLojv4riLrriQgMxraMzJVDY0ntlbgMQUG2U2gPG6L4JmKhq2ui08gEVZGJI3em+jpNh4XvJa3GDC/meBFOdM2NL5x6FCUmWkgyVsBxgSRkynCuUbf+zrmxIFTlAlBpoz08W0+OBu7ONiGrusiOsRC7KoAsz8X0bRm1tTixsHR75RDFyjXUpL0Qn5l Xies@CCSC02QVATWG8WP"
-}
+#}
