@@ -9,7 +9,7 @@ resource "aws_instance" "spring" {
   instance_type          = "t2.micro"
   vpc_security_group_ids = ["sg-547cc53b"]
   subnet_id              = "subnet-049cf4763e0a35908"
-  key_name               = "${aws_key_pair.mykey.key_name}"
+  key_name               = "my-key"
   
   connection {
     type     = "ssh"
