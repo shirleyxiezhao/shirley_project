@@ -23,7 +23,7 @@ resource "aws_instance" "spring" {
   }
    provisioner "remote-exec" {
      inline = [
-      "sudo apt-get install -y jdk8",
+      "sudo apt-get install -y openjdk-8-jdk",
       "java -jar /tmp/spring-boot-sample-tomcat-2.1.1.BUILD-SNAPSHOT.jar"
     ]
   }  
