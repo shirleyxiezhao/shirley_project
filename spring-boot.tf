@@ -12,13 +12,13 @@ resource "aws_instance" "spring" {
   key_name               = "my-key"
   
   provisioner "file" {
-    source = "*.jar"
+    source = "./*.jar"
     destination = "/tmp/*.jar"
   }
    provisioner "remote-exec" {
      inline = [
-      "chmod +x /tmp/hardening.sh",
-      "sudo bash /tmp/hardening.sh"
+      "sudo apt-get install -y jdk8",
+      "java -jar spring-boot-sample-tomcat-2.1.1.BUILD-SNAPSHOT.jar"
     ]
   }
   
