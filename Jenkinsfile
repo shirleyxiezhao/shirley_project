@@ -1,15 +1,16 @@
 
 node (''){
   
- def img= "maven:3.6.0-jdk-8"
+ //def img= "maven:3.6.0-jdk-8"
  checkout scm
  sh 'git clean -fxd'
 
- withCredentials([file(credentialsId: "pkey", variable: 'key')]) {
-					  
-	sh 'cat ${key} > private.pem'
-  sh "terraform init"
-  sh "terraform plan"
-  sh "terraform apply -auto-approve"
-    
+	 withCredentials([file(credentialsId: "pkey", variable: 'key')]) {
+
+	  sh 'cat ${key} > private.pem'
+	  sh "terraform init"
+	  sh "terraform plan"
+	  sh "terraform apply -auto-approve"
+
+	}
 }
