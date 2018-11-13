@@ -3,7 +3,7 @@ node (''){
   
  //def img= "maven:3.6.0-jdk-8"
  checkout scm
- sh 'git clean -fxd'
+ //sh 'git clean -fxd'
 
 	 withCredentials([file(credentialsId: "pkey", variable: 'key')]) {
 
@@ -13,6 +13,6 @@ node (''){
 	  sh "terraform init"
 	  sh "terraform plan"
 	  sh "terraform apply -auto-approve"
-
+	  sh 'rm -f private.pem'
 	}
 }
