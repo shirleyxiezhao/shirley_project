@@ -8,10 +8,11 @@ node (''){
 	 withCredentials([file(credentialsId: "pkey", variable: 'key')]) {
 
 	  sh 'cat ${key} > private.pem'
-          sh 'chmod 400 private.pem'		 
-	  sh "terraform init"
-	  sh "terraform plan"
-	  sh "terraform apply -auto-approve"
+          sh 'chmod 400 private.pem'
+	  sh "cat private.pem"	 
+	  //sh "terraform init"
+	  //sh "terraform plan"
+	  //sh "terraform apply -auto-approve"
 
 	}
 }
